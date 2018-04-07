@@ -1,0 +1,168 @@
+.finger-wrap {
+  margin: 100px auto;
+  width: 100px;
+  height: 130px;
+}
+
+.finger-wrap p {
+  line-height: 28px;
+  margin: 0;
+  text-align: center;
+}
+
+.hand-wrap {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.finger {
+  position: absolute;
+  height: 20%;
+  border-radius: 40%;
+  border: 1px solid #000;
+  background: #ff0;
+}
+
+.finger1 {
+  bottom: 0;
+  left: 8%;
+  width: 47%;
+}
+
+.finger2 {
+  bottom: 12%;
+  left: 7%;
+  width: 48%;
+}
+
+.finger3 {
+  bottom: 24%;
+  left: 6%;
+  width: 49%;
+}
+
+.finger4 {
+  bottom: 36%;
+  left: 5%;
+  width: 50%;
+}
+
+.finger4::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 220%;
+  border-radius: 50%;
+  top: -53%;
+  left: -2px;
+  z-index: -1;
+  background: #ff0;
+  transform: rotate(27deg);
+  border-left: 1px solid #000;
+}
+
+.finger4::after {
+  content: '';
+  position: absolute;
+  top: -12%;
+  left: 0;
+  background: #ff0;
+  width: 60%;
+  height: 100%;
+  border-radius: 50%;
+  transform: rotate(5deg);
+}
+
+.finger5 {
+  position: absolute;
+  bottom: 47%;
+  left: 30%;
+  width: 30%;
+  height: 52%;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-radius: 50% 38% 5% 0;
+  transform: skew(-6deg);
+  background: #ff0;
+  z-index: -1;
+}
+
+.hand {
+  position: absolute;
+  bottom: 3%;
+  left: 30%;
+  width: 50%;
+  height: 60%;
+  background: #ff0;
+  z-index: -1;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.hand::before {
+  content: '';
+  position: absolute;
+  height: 54%;
+  width: 50%;
+  background: #ff0;
+  transform: rotate(-24deg);
+  /* border: 1px solid #000; */
+  top: -28%;
+  left: 14%;
+}
+
+.hand::after {
+  content: '';
+  position: absolute;
+  height: 78%;
+  width: 43%;
+  background: #fff;
+  transform: rotate(-32deg);
+  /* border: 1px solid #000; */
+  border-radius: 50%;
+  border-left: 1px solid #000;
+  top: -47%;
+  left: 62%;
+}
+
+.finesse {
+  width: 24%;
+  height: 43%;
+  border-radius: 50%;
+  position: absolute;
+  right: 9%;
+  bottom: 6%;
+  transform: rotate(5deg);
+  border: 1px solid #000;
+  background: #ff0;
+  z-index: -2;
+}
+
+.add-animate {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #f00;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.add-animate.active {
+  animation: thumb 1s ease;
+}
+
+@keyframes thumb {
+  0% {
+      opacity: 0;
+      top: 50%;
+      transform: scale(1);
+  }
+  100% {
+      opacity: 1;
+      top: -30%;
+      transform: scale(1.5);
+  }
+}

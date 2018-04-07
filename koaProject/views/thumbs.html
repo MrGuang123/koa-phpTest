@@ -1,0 +1,20 @@
+{% extends 'layout.html' %} {% block link %}
+<link rel="stylesheet" href="/css/index.css">{% endblock %} {% block title %}点赞+1小程序{% endblock %} {% block content %}
+<div class="finger-wrap" id="fingerWrap">
+  <div class="hand-wrap" id="handWrap">
+    <div class="finger finger1"></div>
+    <div class="finger finger2"></div>
+    <div class="finger finger3"></div>
+    <div class="finger finger4"></div>
+    <div class="finger5"></div>
+    <div class="hand"></div>
+    <div class="finesse"></div>
+    <label class="add-animate">+1</label>
+  </div>
+  <p id="thumbNums">点赞数：
+    <span>{{count}}</span>
+  </p>
+</div>
+<script src="/script/axios.js"></script>
+<script src="/script/index.js"></script>
+{% endblock %}

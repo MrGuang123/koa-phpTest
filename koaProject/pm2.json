@@ -1,0 +1,9 @@
+{
+  "name": "ytg-node",
+  "script": "app.js",
+  "log_date_format": "YYYY-MM-DD HH:mm Z",
+  "out_file": "log/node-app.stdout.log",
+  "instances": "max",
+  "watch": true,
+  "exec_mode": "cluster"
+}
