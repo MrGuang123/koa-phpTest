@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-04-09T09:07:54.000Z",
+    "end": "2018-04-09T09:07:54.289Z",
+    "duration": 289,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "a521ed9a-38ef-435d-9474-0e2f7d4a2b04",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "1bed530a-ba9e-4e05-8a9f-104e212c7be3",
+        "title": "node接口测试",
+        "fullFile": "F:\\yd-underline\\secondWeek\\koaProject\\test\\service\\index.js",
+        "file": "\\test\\service\\index.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "add-one接口测试",
+            "fullTitle": "node接口测试 add-one接口测试",
+            "timedOut": false,
+            "duration": 140,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "request()\n  .get('/add-one')\n  .expect('Content-Type', /json/)\n  .expect(200)\n  .end(function(err, res) {\n    console.log('点赞+1成功了')\n    if (res.success) {\n      console.log('点赞+1成功了')\n      done()\n    } else {\n      done(err)\n    }\n  })",
+            "err": {},
+            "isRoot": false,
+            "uuid": "b334208f-e83e-4721-ac1c-2bd764d756de",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "get-count接口测试",
+            "fullTitle": "node接口测试 get-count接口测试",
+            "timedOut": false,
+            "duration": 87,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "request()\n  .get('/get-count')\n  .expect('Content-Type', /json/)\n  .expect(200)\n  .end(function(err, res) {\n    console.log('点赞+1成功了')\n    if (res.success) {\n      console.log('获取点赞数成功了')\n      done()\n    } else {\n      done(err)\n    }\n  })",
+            "err": {},
+            "isRoot": false,
+            "uuid": "033eee2c-8304-42b3-aa90-c295096ac2a5",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "b334208f-e83e-4721-ac1c-2bd764d756de",
+          "033eee2c-8304-42b3-aa90-c295096ac2a5"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 227,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "2c2a0149-a269-43fb-bbc9-4459447994c9",
+        "title": "中信银行接口测试",
+        "fullFile": "F:\\yd-underline\\secondWeek\\koaProject\\test\\service\\xnzq.js",
+        "file": "\\test\\service\\xnzq.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "详情页是否收藏接口测试",
+            "fullTitle": "中信银行接口测试 详情页是否收藏接口测试",
+            "timedOut": false,
+            "duration": 20,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "request()\n  .post('/myCollection/isCollection?entId=111084661')\n  // .send({ 'entId': 111084661 })\n  .set('Access-Control-Request-Headers', 'authorization')\n  .set('Authorization', '02700813-8d71-4199-bf71-533c6b10fea6')\n  .expect('Content-Type', /json/)\n  .expect(200)\n  .expect(function(res) {\n    if (res.body.code !== 1 && res.body.data !== '1') {\n      throw new Error(\n        '返回参数不正确**(' + JSON.stringify(res.body) + ')**'\n      )\n    }\n  })\n  .end(function(err, res) {\n    done()\n  })",
+            "err": {},
+            "isRoot": false,
+            "uuid": "630cc584-450e-4950-bb44-3b16c09d3677",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "630cc584-450e-4950-bb44-3b16c09d3677"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 20,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
